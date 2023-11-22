@@ -11,10 +11,6 @@ import cors from 'cors';
 const app = express();
 const PORT = 3000;
 
-app.get('/', (req, res) => {
-  return res.status(200).json({message : 'hi'})
-})
-
 app.use(cors({ origin: '*', optionsSuccessStatus: 200 }));
 app.use(logMiddleware);
 app.use(express.json());
